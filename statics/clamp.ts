@@ -1,3 +1,5 @@
+import { swap } from '../function/swap';
+
 /**
  * 주어진 값이 [min, max] 범위를 벗어나지 않도록 clamp 한다.
  * @param value 대상값
@@ -11,9 +13,7 @@
  */
 export function clamp(value: number, min: number, max: number): number {
   if (min > max) {
-    const temp = min;
-    min = max;
-    max = temp;
+    [min, max] = swap(min, max);
   }
 
   if (value < min) return min;
