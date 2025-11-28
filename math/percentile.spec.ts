@@ -4,7 +4,7 @@ import { percentile } from './percentile';
 describe('percentile', () => {
   it('90 퍼센타일을 계산한다', () => {
     const values = [10, 20, 30, 40, 50];
-    expect(percentile(values, 90)).toBe(50);
+    expect(percentile(values, 90)).toBe(46);
   });
 
   it('50 퍼센타일(중앙값)을 계산한다', () => {

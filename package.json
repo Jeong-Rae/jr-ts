@@ -1,0 +1,25 @@
+{
+  "name": "jr-ts",
+  "version": "1.0.0",
+  "description": "TypeScript utility",
+  "main": "index.ts",
+  "type": "module",
+  "scripts": {
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "test:coverage": "vitest --coverage"
+  },
+  "keywords": [
+    "Jeong-Rae",
+    "utilities",
+    "typescript"
+  ],
+  "author": "Jeong-Rae",
+  "license": "MIT",
+  "devDependencies": {
+    "vitest": "^1.0.0",
+    "@vitest/ui": "^1.0.0",
+    "@vitest/coverage-v8": "^1.0.0",
+    "typescript": "^5.0.0"
+  }
+}
