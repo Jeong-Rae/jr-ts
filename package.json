@@ -25,6 +25,10 @@
   "files": [
     "dist"
   ],
+  "exports": {
+    ".": "./dist/index.js",
+    "./*": "./dist/*"
+  },
   "devDependencies": {
     "vitest": "^1.0.0",
     "@vitest/ui": "^1.0.0",

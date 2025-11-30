@@ -16,6 +16,7 @@
     "moduleResolution": "node"
   },
   "include": [
+    "index.ts",
     "math/**/*.ts",
     "function/**/*.ts"
   ],
