@@ -26,8 +26,22 @@
     "dist"
   ],
   "exports": {
-    ".": "./dist/index.js",
-    "./*": "./dist/*"
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./math": {
+      "types": "./dist/math/index.d.ts",
+      "default": "./dist/math/index.js"
+    },
+    "./function": {
+      "types": "./dist/function/index.d.ts",
+      "default": "./dist/function/index.js"
+    },
+    "./*": {
+      "types": "./dist/*",
+      "default": "./dist/*"
+    }
   },
   "devDependencies": {
     "vitest": "^1.0.0",
