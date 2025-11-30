@@ -1,13 +1,15 @@
 {
-  "name": "jr-ts",
+  "name": "@lyght/ts",
   "version": "1.0.0",
   "description": "TypeScript utility",
-  "main": "index.ts",
+  "main": "dist/index.js",
   "type": "module",
   "scripts": {
+    "build": "tsc -p tsconfig.json",
     "test": "vitest",
     "test:ui": "vitest --ui",
-    "test:coverage": "vitest --coverage"
+    "test:coverage": "vitest --coverage",
+    "prepublishOnly": "npm run build && npm test -- --run"
   },
   "keywords": [
     "Jeong-Rae",
@@ -16,10 +18,39 @@
   ],
   "author": "Jeong-Rae",
   "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "types": "dist/index.d.ts",
+  "files": ["dist"],
   "devDependencies": {
     "vitest": "^1.0.0",
     "@vitest/ui": "^1.0.0",
     "@vitest/coverage-v8": "^1.0.0",
-    "typescript": "^5.0.0"
+    "typescript": "^5.0.0",
+    "semantic-release": "^21.0.0",
+    "@semantic-release/npm": "^9.0.0",
+    "@semantic-release/github": "^9.0.0",
+    "@semantic-release/git": "^10.0.0",
+    "@semantic-release/commit-analyzer": "^9.0.0",
+    "@semantic-release/release-notes-generator": "^10.0.0"
+  }
+
+  ,
+  "release": {
+    "branches": ["main"],
+    "plugins": [
+      ["@semantic-release/commit-analyzer", { "preset": "angular" }],
+      ["@semantic-release/release-notes-generator"],
+      ["@semantic-release/npm", { "npmPublish": true }],
+      ["@semantic-release/github"],
+      [
+        "@semantic-release/git",
+        {
+          "assets": ["package.json", "CHANGELOG.md", "dist"],
+          "message": "chore(release): ${nextRelease.version} [skip ci]"
+        }
+      ]
+    ]
   }
 }
