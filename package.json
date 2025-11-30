@@ -1,6 +1,6 @@
 {
   "name": "@lyght/ts",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "TypeScript utility",
   "main": "dist/index.js",
   "type": "module",
@@ -22,11 +22,13 @@
     "access": "public"
   },
   "types": "dist/index.d.ts",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "devDependencies": {
-      "vitest": "^1.0.0",
-      "@vitest/ui": "^1.0.0",
-      "@vitest/coverage-v8": "^1.0.0",
-      "typescript": "^5.0.0"
+    "vitest": "^1.0.0",
+    "@vitest/ui": "^1.0.0",
+    "@vitest/coverage-v8": "^1.0.0",
+    "typescript": "^5.0.0"
   }
 }
