@@ -24,33 +24,9 @@
   "types": "dist/index.d.ts",
   "files": ["dist"],
   "devDependencies": {
-    "vitest": "^1.0.0",
-    "@vitest/ui": "^1.0.0",
-    "@vitest/coverage-v8": "^1.0.0",
-    "typescript": "^5.0.0",
-    "semantic-release": "^21.0.0",
-    "@semantic-release/npm": "^9.0.0",
-    "@semantic-release/github": "^9.0.0",
-    "@semantic-release/git": "^10.0.0",
-    "@semantic-release/commit-analyzer": "^9.0.0",
-    "@semantic-release/release-notes-generator": "^10.0.0"
-  }
-
-  ,
-  "release": {
-    "branches": ["main"],
-    "plugins": [
-      ["@semantic-release/commit-analyzer", { "preset": "angular" }],
-      ["@semantic-release/release-notes-generator"],
-      ["@semantic-release/npm", { "npmPublish": true }],
-      ["@semantic-release/github"],
-      [
-        "@semantic-release/git",
-        {
-          "assets": ["package.json", "CHANGELOG.md", "dist"],
-          "message": "chore(release): ${nextRelease.version} [skip ci]"
-        }
-      ]
-    ]
+      "vitest": "^1.0.0",
+      "@vitest/ui": "^1.0.0",
+      "@vitest/coverage-v8": "^1.0.0",
+      "typescript": "^5.0.0"
   }
 }
